@@ -1,9 +1,11 @@
-public class SelectiveSort extends IntegerArray {
+public class SelectiveSort {
 	
-	public void iterative() {
-		IntegerArray array = new IntegerArray();
-		
-		
+	public void iterative(IntegerArray array) {
+	
+	}
+	
+	public void recursive(IntegerArray array) {
+	
 	}
 	
 }

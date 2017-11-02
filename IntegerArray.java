@@ -4,12 +4,21 @@ public class IntegerArray {
 	private int[] array;
 	private int index;
 	
+	IntegerArray() {
+		array = initRandArray(10); // default array size 10
+		index = 0;
+	}
+	
 	IntegerArray(int size) {
 		array = initRandArray(size);
 		index = 0;
 	}
 	
-	// random array generator
+	protected int[] getArray() {
+		return array;
+	}
+	
+	// create array and initialize with random values
 	private int[] initRandArray(int size) {
 		// populate array
 		while (array.length < size) {
@@ -24,10 +33,10 @@ public class IntegerArray {
 	}
 	
 	// random number generator used to populate array
-	private int getRandomNum() {
+	private int getRandomNum(int size) {
 		Random rand = new Random();
 		rand.setSeed(System.currentTimeMillis());
 		
-		return rand.nextInt(200); // numbers generated are
+		return rand.nextInt(size); // using variable size as range of random numbers
 	}
 }
