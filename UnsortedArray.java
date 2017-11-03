@@ -1,21 +1,25 @@
 import java.util.Random;
 
-public class IntegerArray {
+class UnsortedArray {
 	private int[] array;
 	private int index;
 	
-	IntegerArray() {
+	UnsortedArray() {
 		array = initRandArray(10); // default array size 10
 		index = 0;
 	}
 	
-	IntegerArray(int size) {
+	UnsortedArray(int size) {
 		array = initRandArray(size);
 		index = 0;
 	}
 	
 	protected int[] getArray() {
 		return array;
+	}
+	
+	protected void printArray() {
+	
 	}
 	
 	// create array and initialize with random values
