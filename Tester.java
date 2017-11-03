@@ -1,14 +1,21 @@
-public class Tester extends UnsortedArray {
+public class Tester extends IntegerArray {
 	
 	public static void main(String[] args) {
 		// create array
-		UnsortedArray array = new UnsortedArray(); // array size 10 (if left blank)
+		IntegerArray array = new IntegerArray(); // array size 10 (if left blank)
+		
+		// print unsorted array
+		System.out.print("Unsorted array: ");
+		array.printArray();
 		
 		// sorting algorithms
 		SelectiveSort selectiveSort = new SelectiveSort();
 		
-		selectiveSort.iterative(array.getArray()); // Selective sort
+		// sort
+		selectiveSort.iterative(array.getArray());
 		
+		// print sorted array
+		System.out.print("Sorted array:   ");
 		array.printArray();
 	}
 	

@@ -1,27 +1,32 @@
-public class SelectiveSort extends SortedArray {
+public class SelectiveSort {
 	
-	public int[] iterative(int[] array) {
-		int[] sortedArray;
+	public void iterative(int[] array) {
 		int min; // smallest number in array
-		int temp; // temporary number used for swapping
+		int swapIndex; // temporary index used for swapping
 		
-		// temporarily assume 1st number is minimum
-		min = array[0];
-		
+		// sort
 		for(int i = 0; i < array.length; i++) {
+			// assign minimum
 			min = array[i];
+			swapIndex = i;
 			
-			if(min > array[i]) // reassign minimum
-				min = array[i];
+			// search array
+			for(int j = i; j < array.length; j++) {
+				if(min > array[j]) { // if new minimum found -> reassign minimum
+					min = array[j];
+					swapIndex = j;
+				}
+			}
 			
-				
+			// swap
+			array[swapIndex] = array[i];
+			array[i] = min;
 		}
 		
-		return sortedArray;
 	}
 	
-	public int[] recursive(int[] array) {
-	
-	}
-	
+//	public int[] recursive(int[] array) {
+//
+//	}
+
 }
