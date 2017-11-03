@@ -25,8 +25,10 @@ public class SelectiveSort {
 		
 	}
 	
-//	public int[] recursive(int[] array) {
+//	public void recursive(int[] array, int min, int swapIndex) {
+//		
 //
+//		recursive(array, );
 //	}
 
 }

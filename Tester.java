@@ -12,7 +12,8 @@ public class Tester extends IntegerArray {
 		SelectiveSort selectiveSort = new SelectiveSort();
 		
 		// sort
-		selectiveSort.iterative(array.getArray());
+//		selectiveSort.iterative(array.getArray());
+		selectiveSort.recursive(array.getArray());
 		
 		// print sorted array
 		System.out.print("Sorted array:   ");
