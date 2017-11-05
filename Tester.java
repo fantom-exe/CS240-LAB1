@@ -10,12 +10,35 @@ public class Tester extends IntegerArray {
 		
 		// sorting algorithms
 		SelectiveSort selectiveSort = new SelectiveSort();
-		InsertionSort insertionSort = new InsertionSort();
 		
-		// sort
 //		selectiveSort.iterative(array.getArray());
 //		selectiveSort.recursive(array.getArray());
-		insertionSort.iterative(array.getArray());
+		
+		InsertionSort insertionSort = new InsertionSort();
+		
+//		insertionSort.iterative(array.getArray());
+//		insertionSort.recursive(array.getArray());
+		
+		ShellSort shellSort = new ShellSort();
+		
+//		shellSort.iterative(array.getArray());
+//		shellSort.recursive(array.getArray());
+		
+		MergeSort mergeSort = new MergeSort();
+
+//		mergeSort.iterative(array.getArray());
+//		mergeSort.recursive(array.getArray());
+		
+		QuickSort quickSort = new QuickSort();
+		
+//		quickSort.iterative(array.getArray());
+//		quickSort.recursive(array.getArray());
+		
+		RadixSort radixSort = new RadixSort();
+		
+//		radixSort.iterative(array.getArray());
+//		radixSort.recursive(array.getArray());
+		
 		
 		// print sorted array
 		System.out.print("Sorted array:   ");

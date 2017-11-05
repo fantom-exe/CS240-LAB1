@@ -1,47 +1,61 @@
 public class InsertionSort {
 	
+	private int currentNum = -1; // currently selected number
+	private int currentNumIndex = -1; // index of variable currentNum
+	
 	public void iterative(int[] array) {
-		int currentNum; // currently selected number
-		int currentNumIndex; // index of the current value
-		int beginUnsortedSubset; // index of where 'unsorted' subset of the array begins
-		int swap; // temporary value used to swap
 		
-		// sort
+		// select next unsorted num in array and (re)set currentNumIndex
 		for(int i = 0; i < array.length; i++) {
 			currentNum = array[i];
 			currentNumIndex = i;
-			beginUnsortedSubset = i+1;
 			
-//			for(int j = i+1; j < array.length; j++) {
-//				if(min > array[j]) {
-//					min = array[j];
-//					indexOfMin = j;
-//				}
-//			}
-			
-			for(int j = 0; j < beginUnsortedSubset; j++) {
+			// backtrack through sorted subset of array
+			for(int j = i-1; j >= 0; j--) {
+				// swap
 				if(currentNum < array[j]) {
-					for(int k = beginUnsortedSubset; k >= j; k--) {
-						swap = array[k];
-						array[k+1] = swap;
-					}
-					
-					swap = array[j];
+					array[currentNumIndex] = array[j];
 					array[j] = currentNum;
-//					array[currentNumIndex] = swap;
+					
+					// update currentNumIndex to the new location of currentNum
+					currentNumIndex = j;
 				}
 				
 			}
+		}
+	}
+	
+	public void recursive(int[] array) {
+		
+		if(currentNumIndex >= 0 && currentNum < array[currentNumIndex - 1]) {
+			array[currentNumIndex] = array[currentNumIndex - 1];
+			array[currentNumIndex - 1] = currentNum;
 			
+//			currentNumIndex -= 1;
 			
+			if(--currentNumIndex >= 0)
+				recursive(array);
+			
+			// test
+			printArray(array);
+		}
+		
+		currentNum = array[++currentNumIndex];
+		
+		if(currentNumIndex < array.length) {
+			currentNumIndex++;
+			recursive(array);
 		}
 		
 	}
 	
-	public void recursive(int[] array) {
-	
+	// print contents of array
+	protected void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++)
+			System.out.print(array[i] + " ");
+		
+		System.out.println();
 	}
-	
 }
 
 
