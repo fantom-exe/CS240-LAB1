@@ -5,10 +5,10 @@ class IntegerArray {
 	
 	// Default constructor
 	IntegerArray() {
-		array = new int[10]; // default array size 10
-		array = initRandArray(10); // default array size 10
+//		array = new int[10]; // default array size 10
+//		array = initRandArray(10); // default array size 10
 		
-//		array = new int[]{7, 2, 4, 1, 5, 3}; // used for testing
+		array = new int[]{38, 27, 43, 3, 9, 82, 10}; // used for testing
 	}
 	
 	// Constructor with size specified

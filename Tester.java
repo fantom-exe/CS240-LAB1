@@ -26,7 +26,7 @@ public class Tester extends IntegerArray {
 		
 		MergeSort mergeSort = new MergeSort();
 
-//		mergeSort.iterative(array.getArray());
+		mergeSort.iterative(array.getArray());
 //		mergeSort.recursive(array.getArray());
 		
 		QuickSort quickSort = new QuickSort();
