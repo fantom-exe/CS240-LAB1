@@ -22,10 +22,33 @@ public class MergeSort {
 		}
 		
 		
-	
+		
+		// array cursors
+		int leftCursor = 0,
+			rightCursor = 0,
+			mainCursor = 0;
+		
+		// merge both arrays
+		while (leftCursor < left.length && rightCursor < right.length) {
+			if(left[leftCursor] < right[rightCursor]) {
+				array[];
+				
+				leftCursor++;
+			}
+			else {
+				;
+				
+				rightCursor++;
+			}
+			
+		}
+		
+		// copy left & right array to original array
+		
+		
 	}
 	
-	public void recursive(IntegerArray array) {
+	public void recursive(int[] array) {
 	
 	}
 	

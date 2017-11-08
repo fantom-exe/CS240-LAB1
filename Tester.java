@@ -39,7 +39,6 @@ public class Tester extends IntegerArray {
 //		radixSort.iterative(array.getArray());
 //		radixSort.recursive(array.getArray());
 		
-		
 		// print sorted array
 		System.out.print("Sorted array:   ");
 		array.printArray();
