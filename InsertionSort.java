@@ -1,9 +1,9 @@
 public class InsertionSort {
 	
-	private int currentNum = -1; // currently selected number
-	private int currentNumIndex = -1; // index of variable currentNum
-	
 	public void iterative(int[] array) {
+		
+		int currentNum = -1; // currently selected number
+		int currentNumIndex = -1; // index of variable currentNum
 		
 		// select next unsorted num in array and (re)set currentNumIndex
 		for(int i = 0; i < array.length; i++) {
@@ -23,30 +23,12 @@ public class InsertionSort {
 				
 			}
 		}
+		
 	}
 	
 	public void recursive(int[] array) {
-		
-		if(currentNumIndex >= 0 && currentNum < array[currentNumIndex - 1]) {
-			array[currentNumIndex] = array[currentNumIndex - 1];
-			array[currentNumIndex - 1] = currentNum;
-			
-//			currentNumIndex -= 1;
-			
-			if(--currentNumIndex >= 0)
-				recursive(array);
-			
-			// test
-			printArray(array);
-		}
-		
-		currentNum = array[++currentNumIndex];
-		
-		if(currentNumIndex < array.length) {
-			currentNumIndex++;
-			recursive(array);
-		}
-		
+	
+	
 	}
 	
 	// print contents of array

@@ -31,7 +31,7 @@ public class MergeSort {
 		// merge both arrays
 		while (leftCursor < left.length && rightCursor < right.length) {
 			if(left[leftCursor] < right[rightCursor]) {
-				array[];
+//				array[];
 				
 				leftCursor++;
 			}
