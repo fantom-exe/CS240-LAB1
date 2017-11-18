@@ -4,10 +4,13 @@ public class ShellSort {
 	*/
 	public void iterative(int[] array) {
 		
+		// find sequence #
+		int h = 1;
 		
+		while (h <= array.length/2)
+			h = 2*h + 1;
 		
 		// insertion sort
-		
 		int currentNum = -1; // currently selected number
 		int currentNumIndex = -1; // index of variable currentNum
 		
