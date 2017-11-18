@@ -1,24 +1,23 @@
 public class InsertionSort {
 	
 	public void iterative(int[] array) {
-		
-		int currentNum = -1; // currently selected number
-		int currentNumIndex = -1; // index of variable currentNum
+		int swap = -1; // temporary variable used for swapping
+		int swapIndex = -1; // index of swap
 		
 		// select next unsorted num in array and (re)set currentNumIndex
 		for(int i = 0; i < array.length; i++) {
-			currentNum = array[i];
-			currentNumIndex = i;
+			swap = array[i];
+			swapIndex = i;
 			
 			// backtrack through sorted subset of array
 			for(int j = i-1; j >= 0; j--) {
 				// swap
-				if(currentNum < array[j]) {
-					array[currentNumIndex] = array[j];
-					array[j] = currentNum;
+				if(swap < array[j]) {
+					array[swapIndex] = array[j];
+					array[j] = swap;
 					
-					// update currentNumIndex to the new location of currentNum
-					currentNumIndex = j;
+					// update swapIndex
+					swapIndex = j;
 				}
 				
 			}
