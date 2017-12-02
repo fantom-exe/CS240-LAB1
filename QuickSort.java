@@ -12,7 +12,7 @@ public class QuickSort {
 		
 		// sub-lists
 		int[] left = new int[array.length]; // sub-list left of pivot
-		int[] right = new int[]; // sub-list right of pivot
+		int[] right = new int[array.length]; // sub-list right of pivot
 		
 		for(int i = 0; i < array.length; i++) {
 		
