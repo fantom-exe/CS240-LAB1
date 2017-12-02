@@ -11,8 +11,8 @@ public class ShellSort {
 			seqNum = (seqNum * 2) + 1;
 		
 		// insertion sort
-		int swap = -1; // temporary variable used for swapping
-		int swapIndex = -1; // index of swap
+		int swap; // temporary variable used for swapping
+		int swapIndex; // index of swap
 		
 		while(seqNum > 0) {
 			// compare num at index with num at sequence # (h+index)
@@ -55,7 +55,7 @@ public class ShellSort {
 	}
 	
 	public void recursive(IntegerArray array) {
-		
+	
 	}
 	
 	// print contents of array

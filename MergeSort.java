@@ -13,15 +13,11 @@ public class MergeSort {
 		// populate left array
 		for(int i = 0; i < mid; i++) {
 			left[i] = array[i];
-			
 		}
 		// populate right array
 		for(int i = mid; mid < array.length; i++) {
 			right[i] = array[i];
-			
 		}
-		
-		
 		
 		// array cursors
 		int leftCursor = 0,
