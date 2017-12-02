@@ -21,12 +21,12 @@ public class Tester extends IntegerArray {
 		
 		ShellSort shellSort = new ShellSort();
 		
-		shellSort.iterative(array.getArray());
+//		shellSort.iterative(array.getArray());
 //		shellSort.recursive(array.getArray());
 		
 		MergeSort mergeSort = new MergeSort();
 
-//		mergeSort.iterative(array.getArray());
+		mergeSort.iterative(array.getArray());
 //		mergeSort.recursive(array.getArray());
 		
 		QuickSort quickSort = new QuickSort();

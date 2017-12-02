@@ -14,10 +14,45 @@ public class MergeSort {
 		for(int i = 0; i < mid; i++) {
 			left[i] = array[i];
 		}
+		printArray(left);
+		
 		// populate right array
-		for(int i = mid; mid < array.length; i++) {
-			right[i] = array[i];
+		for(int i = 0; mid < array.length; i++, mid++) {
+			right[i] = array[mid];
 		}
+		printArray(right);
+		
+		// sort sub-arrays
+		int first, second;
+		
+		// sort left array
+		for(int i = 1, j = i-1; i < left.length; i+=2) {
+			first = left[j];
+			second = left[i];
+			
+			// swap
+			if (second < first) {
+				left[j] = second;
+				left[i] = first;
+			}
+		}
+		printArray(left);
+		
+		// sort right array
+		for(int i = 1, j = i-1; i < right.length; i+=2) {
+			first = right[j];
+			second = right[i];
+			
+			// swap
+			if (second < first) {
+				right[j] = second;
+				right[i] = first;
+			}
+		}
+		printArray(right);
+		
+		// merge sorted arrays
+		
 		
 		// array cursors
 		int leftCursor = 0,
@@ -48,5 +83,12 @@ public class MergeSort {
 	
 	}
 	
+	// print contents of array
+	protected void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++)
+			System.out.print(array[i] + " ");
+		
+		System.out.println();
+	}
 }
 
